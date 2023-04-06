@@ -1,2 +1,3 @@
-# umi4-antdpro-style
-关于umi4安装项目的问题
+# README
+
+`@umijs/max` 模板项目，更多功能参考 [Umi Max 简介](https://umijs.org/docs/max/introduce)
