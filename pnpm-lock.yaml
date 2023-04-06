@@ -5,11 +5,11 @@ dependencies:
     specifier: ^4.7.0
     version: 4.7.0(react-dom@17.0.2)(react@16.14.0)
   '@ant-design/pro-components':
-    specifier: 2.0.1
-    version: 2.0.1(@types/lodash.merge@4.6.7)(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+    specifier: 2.4.4
+    version: 2.4.4(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
   '@umijs/max':
     specifier: ^4.0.64
-    version: 4.0.64(@babel/core@7.21.4)(@types/lodash.merge@4.6.7)(@types/react-dom@18.0.0)(@types/react@18.0.0)(dva@2.5.0-beta.2)(postcss@8.4.21)(prettier@2.7.1)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)(styled-components@5.3.9)(typescript@5.0.2)(webpack@5.78.0)
+    version: 4.0.64(@babel/core@7.21.4)(@types/react-dom@18.0.0)(@types/react@18.0.0)(dva@2.5.0-beta.2)(postcss@8.4.21)(prettier@2.7.1)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)(styled-components@5.3.9)(typescript@5.0.2)(webpack@5.78.0)
   antd:
     specifier: ^5.0.0
     version: 5.0.0(react-dom@17.0.2)(react@16.14.0)
@@ -70,8 +70,31 @@ packages:
       '@ctrl/tinycolor': 3.6.0
     dev: false
 
+  /@ant-design/colors@7.0.0:
+    resolution: {integrity: sha512-iVm/9PfGCbC0dSMBrz7oiEXZaaGH7ceU40OJEfKmyuzR9R5CRimJYPlRiFtMQGQcbNMea/ePcoIebi4ASGYXtg==}
+    dependencies:
+      '@ctrl/tinycolor': 3.6.0
+    dev: false
+
   /@ant-design/cssinjs@0.0.0-alpha.60(react-dom@17.0.2)(react@16.14.0):
     resolution: {integrity: sha512-EQlU5f20flZMQ9XDbR/RL5MhQedgkHXR6o4pfbe6cMv0YMXK/jv669++N8msC7ZoNnGf2OxbmGRkvVS0OqG3iw==}
+    peerDependencies:
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      '@babel/runtime': 7.21.0
+      '@emotion/hash': 0.8.0
+      '@emotion/unitless': 0.7.5
+      classnames: 2.3.2
+      csstype: 3.1.2
+      rc-util: 5.29.3(react-dom@17.0.2)(react@16.14.0)
+      react: 16.14.0
+      react-dom: 17.0.2(react@16.14.0)
+      stylis: 4.1.3
+    dev: false
+
+  /@ant-design/cssinjs@1.7.1(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-7pwBx1ozVXDKLXKrORRCetIxIvDxZLVSzj8hTuD/SYGXDPkMzT0PxvJIyBPixAJ/eqejFARP0hrgk4XREOgGbA==}
     peerDependencies:
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
@@ -107,18 +130,36 @@ packages:
       react-dom: 17.0.2(react@16.14.0)
     dev: false
 
-  /@ant-design/pro-card@2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-tgP9WC07VK1uj9jmT6YK2yaCQo7ytrjrJS0ikYGNWhAL/i+pTvCfGgapGXaoTiX9OdpOp3EalVZBsdngdNixFA==}
+  /@ant-design/icons@5.0.1(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-ZyF4ksXCcdtwA/1PLlnFLcF/q8/MhwxXhKHh4oCHDA4Ip+ZzAHoICtyp4wZWfiCVDP0yuz3HsjyvuldHFb3wjA==}
+    engines: {node: '>=8'}
     peerDependencies:
-      antd: '>=4.20.0'
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      '@ant-design/colors': 7.0.0
+      '@ant-design/icons-svg': 4.2.1
+      '@babel/runtime': 7.21.0
+      classnames: 2.3.2
+      rc-util: 5.29.3(react-dom@17.0.2)(react@16.14.0)
+      react: 16.14.0
+      react-dom: 17.0.2(react@16.14.0)
+    dev: false
+
+  /@ant-design/pro-card@2.3.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-LVkxHm8/iMSBkbGX9rgqiqLj8H8LrEbJSgbOdrRePzx2ukXzsYzzLap3MUXmhjPvMsoKD69qNeqC3WIQKNpfoA==}
+    peerDependencies:
+      antd: '>=4.23.0'
       react: '>=16.9.0'
     dependencies:
-      '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-utils': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/icons': 5.0.1(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-provider': 2.7.0(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-utils': 2.7.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
       antd: 4.24.8(react-dom@17.0.2)(react@16.14.0)
       classnames: 2.3.2
       omit.js: 2.0.2
+      rc-resize-observer: 1.3.1(react-dom@17.0.2)(react@16.14.0)
       rc-util: 5.29.3(react-dom@17.0.2)(react@16.14.0)
       react: 16.14.0
     transitivePeerDependencies:
@@ -126,18 +167,20 @@ packages:
       - react-dom
     dev: false
 
-  /@ant-design/pro-card@2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-tgP9WC07VK1uj9jmT6YK2yaCQo7ytrjrJS0ikYGNWhAL/i+pTvCfGgapGXaoTiX9OdpOp3EalVZBsdngdNixFA==}
+  /@ant-design/pro-card@2.3.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-LVkxHm8/iMSBkbGX9rgqiqLj8H8LrEbJSgbOdrRePzx2ukXzsYzzLap3MUXmhjPvMsoKD69qNeqC3WIQKNpfoA==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       react: '>=16.9.0'
     dependencies:
-      '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-utils': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/icons': 5.0.1(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-provider': 2.7.0(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-utils': 2.7.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
       antd: 5.0.0(react-dom@17.0.2)(react@16.14.0)
       classnames: 2.3.2
       omit.js: 2.0.2
+      rc-resize-observer: 1.3.1(react-dom@17.0.2)(react@16.14.0)
       rc-util: 5.29.3(react-dom@17.0.2)(react@16.14.0)
       react: 16.14.0
     transitivePeerDependencies:
@@ -145,23 +188,23 @@ packages:
       - react-dom
     dev: false
 
-  /@ant-design/pro-components@2.0.1(@types/lodash.merge@4.6.7)(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-DDTENytOLZWBLwngXjup7aRDjcDOQ+ZhiSmgiN8SRFX4d50jXPzVf5SL6BrGX2JctSzEOpsrKktaHB5Ua2yuTg==}
+  /@ant-design/pro-components@2.4.4(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-pSzERiJz0RdH/1Lf8PgHuOZNF9AEvLeIoVYs/1tUchasTCLqedVvS9gK/4RLG3R0YROIe/G6LSBqB2WMpRDvug==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
     dependencies:
-      '@ant-design/pro-card': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-descriptions': 2.0.0-experimental.15(@types/lodash.merge@4.6.7)(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-field': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-form': 2.0.0-experimental.15(@types/lodash.merge@4.6.7)(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-layout': 7.0.0-experimental.27(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-list': 2.0.0-experimental.16(@types/lodash.merge@4.6.7)(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-provider': 2.0.0-experimental.10(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-skeleton': 2.0.0-experimental.7(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-table': 3.0.0-experimental.16(@types/lodash.merge@4.6.7)(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-utils': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-card': 2.3.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-descriptions': 2.2.3(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-field': 2.5.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-form': 2.10.1(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-layout': 7.10.3(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-list': 2.3.4(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-provider': 2.7.0(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-skeleton': 2.1.0(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-table': 3.6.1(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-utils': 2.7.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
       antd: 4.24.8(react-dom@17.0.2)(react@16.14.0)
       react: 16.14.0
@@ -172,23 +215,23 @@ packages:
       - rc-field-form
     dev: false
 
-  /@ant-design/pro-components@2.0.1(@types/lodash.merge@4.6.7)(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-DDTENytOLZWBLwngXjup7aRDjcDOQ+ZhiSmgiN8SRFX4d50jXPzVf5SL6BrGX2JctSzEOpsrKktaHB5Ua2yuTg==}
+  /@ant-design/pro-components@2.4.4(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-pSzERiJz0RdH/1Lf8PgHuOZNF9AEvLeIoVYs/1tUchasTCLqedVvS9gK/4RLG3R0YROIe/G6LSBqB2WMpRDvug==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
     dependencies:
-      '@ant-design/pro-card': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-descriptions': 2.0.0-experimental.15(@types/lodash.merge@4.6.7)(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-field': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-form': 2.0.0-experimental.15(@types/lodash.merge@4.6.7)(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-layout': 7.0.0-experimental.27(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-list': 2.0.0-experimental.16(@types/lodash.merge@4.6.7)(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-provider': 2.0.0-experimental.10(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-skeleton': 2.0.0-experimental.7(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-table': 3.0.0-experimental.16(@types/lodash.merge@4.6.7)(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-utils': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-card': 2.3.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-descriptions': 2.2.3(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-field': 2.5.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-form': 2.10.1(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-layout': 7.10.3(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-list': 2.3.4(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-provider': 2.7.0(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-skeleton': 2.1.0(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-table': 3.6.1(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-utils': 2.7.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
       antd: 5.0.0(react-dom@17.0.2)(react@16.14.0)
       react: 16.14.0
@@ -199,109 +242,116 @@ packages:
       - rc-field-form
     dev: false
 
-  /@ant-design/pro-descriptions@2.0.0-experimental.15(@types/lodash.merge@4.6.7)(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-+RCBWXwR+ozT+Wz+nVZBRIWWoLiedkU2tJnkYDFifVbKjC2pllMS7Mz+XU1P9l1ZfV8MOHrHafCuOEs59eiRFA==}
+  /@ant-design/pro-descriptions@2.2.3(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-/06dGLUGh469O3T8+cEBJp5IzQpjXr8gmX2Hyu93vYFZq5qYxoDzSbS5La3o9bveiItMxkjTozMQG38cU3X36A==}
     peerDependencies:
+      antd: '>=4.23.0'
       react: '>=16.9.0'
     dependencies:
-      '@ant-design/pro-field': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-form': 2.0.0-experimental.15(@types/lodash.merge@4.6.7)(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-skeleton': 2.0.0-experimental.7(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-utils': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-field': 2.5.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-form': 2.10.1(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-skeleton': 2.1.0(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-utils': 2.7.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
+      antd: 4.24.8(react-dom@17.0.2)(react@16.14.0)
       rc-util: 5.29.3(react-dom@17.0.2)(react@16.14.0)
       react: 16.14.0
       use-json-comparison: 1.0.6(react@16.14.0)
     transitivePeerDependencies:
       - '@types/lodash.merge'
-      - antd
       - prop-types
       - rc-field-form
       - react-dom
     dev: false
 
-  /@ant-design/pro-descriptions@2.0.0-experimental.15(@types/lodash.merge@4.6.7)(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-+RCBWXwR+ozT+Wz+nVZBRIWWoLiedkU2tJnkYDFifVbKjC2pllMS7Mz+XU1P9l1ZfV8MOHrHafCuOEs59eiRFA==}
+  /@ant-design/pro-descriptions@2.2.3(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-/06dGLUGh469O3T8+cEBJp5IzQpjXr8gmX2Hyu93vYFZq5qYxoDzSbS5La3o9bveiItMxkjTozMQG38cU3X36A==}
     peerDependencies:
+      antd: '>=4.23.0'
       react: '>=16.9.0'
     dependencies:
-      '@ant-design/pro-field': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-form': 2.0.0-experimental.15(@types/lodash.merge@4.6.7)(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-skeleton': 2.0.0-experimental.7(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-utils': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-field': 2.5.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-form': 2.10.1(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-skeleton': 2.1.0(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-utils': 2.7.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
+      antd: 5.0.0(react-dom@17.0.2)(react@16.14.0)
       rc-util: 5.29.3(react-dom@17.0.2)(react@16.14.0)
       react: 16.14.0
       use-json-comparison: 1.0.6(react@16.14.0)
     transitivePeerDependencies:
       - '@types/lodash.merge'
-      - antd
       - prop-types
       - rc-field-form
       - react-dom
     dev: false
 
-  /@ant-design/pro-field@2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-XgSXRI804q67+uSszJ0scLF1sT1Z+6bUOL2Qe9O6qIiRGZmAkqs6hpI/6CJokvcIMWwe3P+GNuygZJJWKqPDVg==}
+  /@ant-design/pro-field@2.5.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-n32ZtmxgbPIkPvJNd0hSw26PQKlThqTc6coMU4piOQH/PWg0H22/eGm57fpRPZKsOxNCHtVsT13+0SBBXrdwfA==}
     peerDependencies:
+      antd: '>=4.23.0'
       react: '>=16.9.0'
     dependencies:
-      '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-provider': 2.0.0-experimental.10(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-utils': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/icons': 5.0.1(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-provider': 2.7.0(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-utils': 2.7.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
       '@chenshuai2144/sketch-color': 1.0.9(react@16.14.0)
+      antd: 4.24.8(react-dom@17.0.2)(react@16.14.0)
       classnames: 2.3.2
       dayjs: 1.11.7
       lodash.tonumber: 4.0.3
       omit.js: 2.0.2
       rc-util: 5.29.3(react-dom@17.0.2)(react@16.14.0)
       react: 16.14.0
-      swr: 1.3.0(react@16.14.0)
+      swr: 2.1.2(react@16.14.0)
     transitivePeerDependencies:
-      - antd
       - prop-types
       - react-dom
     dev: false
 
-  /@ant-design/pro-field@2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-XgSXRI804q67+uSszJ0scLF1sT1Z+6bUOL2Qe9O6qIiRGZmAkqs6hpI/6CJokvcIMWwe3P+GNuygZJJWKqPDVg==}
+  /@ant-design/pro-field@2.5.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-n32ZtmxgbPIkPvJNd0hSw26PQKlThqTc6coMU4piOQH/PWg0H22/eGm57fpRPZKsOxNCHtVsT13+0SBBXrdwfA==}
     peerDependencies:
+      antd: '>=4.23.0'
       react: '>=16.9.0'
     dependencies:
-      '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-provider': 2.0.0-experimental.10(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-utils': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/icons': 5.0.1(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-provider': 2.7.0(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-utils': 2.7.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
       '@chenshuai2144/sketch-color': 1.0.9(react@16.14.0)
+      antd: 5.0.0(react-dom@17.0.2)(react@16.14.0)
       classnames: 2.3.2
       dayjs: 1.11.7
       lodash.tonumber: 4.0.3
       omit.js: 2.0.2
       rc-util: 5.29.3(react-dom@17.0.2)(react@16.14.0)
       react: 16.14.0
-      swr: 1.3.0(react@16.14.0)
+      swr: 2.1.2(react@16.14.0)
     transitivePeerDependencies:
-      - antd
       - prop-types
       - react-dom
     dev: false
 
-  /@ant-design/pro-form@2.0.0-experimental.15(@types/lodash.merge@4.6.7)(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-Yo4Rbese4MdO+BxVVUIjiC0d9lJBJuD2jubMAP9+LxpNgjdLMKOG4a3SZCBVk6oOcvFlh+LX5iXD/V5Qav6jdw==}
+  /@ant-design/pro-form@2.10.1(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-OslUCqkITJHE1c6Oj2hIddvSiehPgkTFnNjCX99Ip7lJ8NIkT30UEvTM79jzJeue+y1lqLF8YH0HX4ajI3apIw==}
     peerDependencies:
       '@types/lodash.merge': ^4.6.7
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       rc-field-form: ^1.22.0
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
+    peerDependenciesMeta:
+      '@types/lodash.merge':
+        optional: true
     dependencies:
-      '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-field': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-provider': 2.0.0-experimental.10(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-utils': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/icons': 5.0.1(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-field': 2.5.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-provider': 2.7.0(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-utils': 2.7.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
-      '@types/lodash.merge': 4.6.7
+      '@chenshuai2144/sketch-color': 1.0.9(react@16.14.0)
       '@umijs/use-params': 1.0.9(react@16.14.0)
       antd: 4.24.8(react-dom@17.0.2)(react@16.14.0)
       classnames: 2.3.2
@@ -318,21 +368,24 @@ packages:
       - prop-types
     dev: false
 
-  /@ant-design/pro-form@2.0.0-experimental.15(@types/lodash.merge@4.6.7)(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-Yo4Rbese4MdO+BxVVUIjiC0d9lJBJuD2jubMAP9+LxpNgjdLMKOG4a3SZCBVk6oOcvFlh+LX5iXD/V5Qav6jdw==}
+  /@ant-design/pro-form@2.10.1(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-OslUCqkITJHE1c6Oj2hIddvSiehPgkTFnNjCX99Ip7lJ8NIkT30UEvTM79jzJeue+y1lqLF8YH0HX4ajI3apIw==}
     peerDependencies:
       '@types/lodash.merge': ^4.6.7
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       rc-field-form: ^1.22.0
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
+    peerDependenciesMeta:
+      '@types/lodash.merge':
+        optional: true
     dependencies:
-      '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-field': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-provider': 2.0.0-experimental.10(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-utils': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/icons': 5.0.1(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-field': 2.5.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-provider': 2.7.0(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-utils': 2.7.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
-      '@types/lodash.merge': 4.6.7
+      '@chenshuai2144/sketch-color': 1.0.9(react@16.14.0)
       '@umijs/use-params': 1.0.9(react@16.14.0)
       antd: 5.0.0(react-dom@17.0.2)(react@16.14.0)
       classnames: 2.3.2
@@ -349,19 +402,18 @@ packages:
       - prop-types
     dev: false
 
-  /@ant-design/pro-layout@7.0.0-experimental.27(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-6g36m3Kun0DYOZAB0IsdkiW6/FXhiX9gt6wSG7EkzCScUhVbx+UW1fGSTVbjBit0KaNJeYNJ15ix/VxZKpcwtw==}
+  /@ant-design/pro-layout@7.10.3(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-r8S+KqtyKFmt9eG5/G7KS2O8oIpmxZA3/WIYGMbSOyD4YkwmK1MF9KCjUErdHxQxIS9IL8Fc6V23/8KVAZmZyQ==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
     dependencies:
-      '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-provider': 2.0.0-experimental.10(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-utils': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/icons': 5.0.1(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-provider': 2.7.0(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-utils': 2.7.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
-      '@umijs/route-utils': 2.2.2
-      '@umijs/ssr-darkreader': 4.9.45
+      '@umijs/route-utils': 4.0.1
       '@umijs/use-params': 1.0.9(react@16.14.0)
       antd: 4.24.8(react-dom@17.0.2)(react@16.14.0)
       classnames: 2.3.2
@@ -372,8 +424,7 @@ packages:
       rc-util: 5.29.3(react-dom@17.0.2)(react@16.14.0)
       react: 16.14.0
       react-dom: 17.0.2(react@16.14.0)
-      swr: 1.3.0(react@16.14.0)
-      unstated-next: 1.1.0
+      swr: 2.1.2(react@16.14.0)
       use-json-comparison: 1.0.6(react@16.14.0)
       use-media-antd-query: 1.1.0(react@16.14.0)
       warning: 4.0.3
@@ -381,19 +432,18 @@ packages:
       - prop-types
     dev: false
 
-  /@ant-design/pro-layout@7.0.0-experimental.27(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-6g36m3Kun0DYOZAB0IsdkiW6/FXhiX9gt6wSG7EkzCScUhVbx+UW1fGSTVbjBit0KaNJeYNJ15ix/VxZKpcwtw==}
+  /@ant-design/pro-layout@7.10.3(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-r8S+KqtyKFmt9eG5/G7KS2O8oIpmxZA3/WIYGMbSOyD4YkwmK1MF9KCjUErdHxQxIS9IL8Fc6V23/8KVAZmZyQ==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
     dependencies:
-      '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-provider': 2.0.0-experimental.10(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-utils': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/icons': 5.0.1(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-provider': 2.7.0(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-utils': 2.7.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
-      '@umijs/route-utils': 2.2.2
-      '@umijs/ssr-darkreader': 4.9.45
+      '@umijs/route-utils': 4.0.1
       '@umijs/use-params': 1.0.9(react@16.14.0)
       antd: 5.0.0(react-dom@17.0.2)(react@16.14.0)
       classnames: 2.3.2
@@ -404,8 +454,7 @@ packages:
       rc-util: 5.29.3(react-dom@17.0.2)(react@16.14.0)
       react: 16.14.0
       react-dom: 17.0.2(react@16.14.0)
-      swr: 1.3.0(react@16.14.0)
-      unstated-next: 1.1.0
+      swr: 2.1.2(react@16.14.0)
       use-json-comparison: 1.0.6(react@16.14.0)
       use-media-antd-query: 1.1.0(react@16.14.0)
       warning: 4.0.3
@@ -413,17 +462,17 @@ packages:
       - prop-types
     dev: false
 
-  /@ant-design/pro-list@2.0.0-experimental.16(@types/lodash.merge@4.6.7)(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-kB5w9M4VLu8xjkQG30AYoz3rXAJERmYoshbsrLnv2PT+3LcIz03ApUjaWODj+UZE8DNcwtRFjhG+64IvURc8eQ==}
+  /@ant-design/pro-list@2.3.4(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-Wi5/tvlATVfI0ueIdIzF23xGJjZpvOYOE1mbfypiiT5Fn55/+Jq4mIs1UWVvZE8dVscfqvbEarwvcEUXzl2w1g==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
     dependencies:
-      '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-card': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-field': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-table': 3.0.0-experimental.16(@types/lodash.merge@4.6.7)(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/icons': 5.0.1(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-card': 2.3.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-field': 2.5.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-table': 3.6.1(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
       antd: 4.24.8(react-dom@17.0.2)(react@16.14.0)
       classnames: 2.3.2
@@ -432,7 +481,6 @@ packages:
       rc-util: 4.21.1
       react: 16.14.0
       react-dom: 17.0.2(react@16.14.0)
-      unstated-next: 1.1.0
       use-media-antd-query: 1.1.0(react@16.14.0)
     transitivePeerDependencies:
       - '@types/lodash.merge'
@@ -440,17 +488,17 @@ packages:
       - rc-field-form
     dev: false
 
-  /@ant-design/pro-list@2.0.0-experimental.16(@types/lodash.merge@4.6.7)(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-kB5w9M4VLu8xjkQG30AYoz3rXAJERmYoshbsrLnv2PT+3LcIz03ApUjaWODj+UZE8DNcwtRFjhG+64IvURc8eQ==}
+  /@ant-design/pro-list@2.3.4(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-Wi5/tvlATVfI0ueIdIzF23xGJjZpvOYOE1mbfypiiT5Fn55/+Jq4mIs1UWVvZE8dVscfqvbEarwvcEUXzl2w1g==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
     dependencies:
-      '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-card': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-field': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-table': 3.0.0-experimental.16(@types/lodash.merge@4.6.7)(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/icons': 5.0.1(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-card': 2.3.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-field': 2.5.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-table': 3.6.1(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
       antd: 5.0.0(react-dom@17.0.2)(react@16.14.0)
       classnames: 2.3.2
@@ -459,7 +507,6 @@ packages:
       rc-util: 4.21.1
       react: 16.14.0
       react-dom: 17.0.2(react@16.14.0)
-      unstated-next: 1.1.0
       use-media-antd-query: 1.1.0(react@16.14.0)
     transitivePeerDependencies:
       - '@types/lodash.merge'
@@ -467,40 +514,44 @@ packages:
       - rc-field-form
     dev: false
 
-  /@ant-design/pro-provider@2.0.0-experimental.10(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-P3rxOxc3k/uJhAGPUr4VkIRW6ucyeGBjUnMZpYOv5jcUC3FLVz/NQUNAcebmhS86qdOiWQ/RfrDvnYI9GQCXow==}
+  /@ant-design/pro-provider@2.7.0(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-5iKr0rIGekmOH7t5C6k0AsNp8CROroTzewjnaYLF3gt+kdz4+q8IQ5rmQG78e0npcJp6yQLJvIxevuJl5kFNfw==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
     dependencies:
+      '@ant-design/cssinjs': 1.7.1(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
+      '@ctrl/tinycolor': 3.6.0
       antd: 4.24.8(react-dom@17.0.2)(react@16.14.0)
       rc-util: 5.29.3(react-dom@17.0.2)(react@16.14.0)
       react: 16.14.0
       react-dom: 17.0.2(react@16.14.0)
-      swr: 1.3.0(react@16.14.0)
+      swr: 2.1.2(react@16.14.0)
     dev: false
 
-  /@ant-design/pro-provider@2.0.0-experimental.10(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-P3rxOxc3k/uJhAGPUr4VkIRW6ucyeGBjUnMZpYOv5jcUC3FLVz/NQUNAcebmhS86qdOiWQ/RfrDvnYI9GQCXow==}
+  /@ant-design/pro-provider@2.7.0(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-5iKr0rIGekmOH7t5C6k0AsNp8CROroTzewjnaYLF3gt+kdz4+q8IQ5rmQG78e0npcJp6yQLJvIxevuJl5kFNfw==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
     dependencies:
+      '@ant-design/cssinjs': 1.7.1(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
+      '@ctrl/tinycolor': 3.6.0
       antd: 5.0.0(react-dom@17.0.2)(react@16.14.0)
       rc-util: 5.29.3(react-dom@17.0.2)(react@16.14.0)
       react: 16.14.0
       react-dom: 17.0.2(react@16.14.0)
-      swr: 1.3.0(react@16.14.0)
+      swr: 2.1.2(react@16.14.0)
     dev: false
 
-  /@ant-design/pro-skeleton@2.0.0-experimental.7(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-m9dMPVhRNcNamzN8nJDg1mXy8UeNDyHiWFn9qltWq2nKD5huFn5315mvyu8+lsCcx/+E74ZN2TfKm6VDgweeMA==}
+  /@ant-design/pro-skeleton@2.1.0(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-+1fyj51v9DjCZgqwPIM64nMpLrWVfOs7q/b4kjYoa2kMsv3ECpfEabx5+iwj76Dy9JnZxAUTGM2aaoA3DyG6WA==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
     dependencies:
@@ -511,10 +562,10 @@ packages:
       use-media-antd-query: 1.1.0(react@16.14.0)
     dev: false
 
-  /@ant-design/pro-skeleton@2.0.0-experimental.7(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-m9dMPVhRNcNamzN8nJDg1mXy8UeNDyHiWFn9qltWq2nKD5huFn5315mvyu8+lsCcx/+E74ZN2TfKm6VDgweeMA==}
+  /@ant-design/pro-skeleton@2.1.0(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-+1fyj51v9DjCZgqwPIM64nMpLrWVfOs7q/b4kjYoa2kMsv3ECpfEabx5+iwj76Dy9JnZxAUTGM2aaoA3DyG6WA==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
     dependencies:
@@ -525,82 +576,78 @@ packages:
       use-media-antd-query: 1.1.0(react@16.14.0)
     dev: false
 
-  /@ant-design/pro-table@3.0.0-experimental.16(@types/lodash.merge@4.6.7)(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-XVKzjLfLAodt603s+BcDp5biVG/hmBzTCdQ+CEQstIOV1iBjlo8uUkExiOXj00x/qo6wsl4nmh/SQppvrwohaQ==}
+  /@ant-design/pro-table@3.6.1(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-t6B2al8HoX8WDVaPqmbtjYIRV1LG8Eo/WaWvFUlhWUaQ9h2rh+GxtFRe2pA3XBVB5TEYiBEu0fqPvjglNEox6g==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       rc-field-form: ^1.22.0
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
     dependencies:
-      '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-card': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-field': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-form': 2.0.0-experimental.15(@types/lodash.merge@4.6.7)(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-provider': 2.0.0-experimental.10(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-utils': 2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/icons': 5.0.1(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-card': 2.3.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-field': 2.5.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-form': 2.10.1(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-provider': 2.7.0(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-utils': 2.7.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
       antd: 4.24.8(react-dom@17.0.2)(react@16.14.0)
       classnames: 2.3.2
       dayjs: 1.11.7
       omit.js: 2.0.2
       rc-field-form: 1.29.1(react-dom@17.0.2)(react@16.14.0)
+      rc-resize-observer: 1.3.1(react-dom@17.0.2)(react@16.14.0)
       rc-util: 5.29.3(react-dom@17.0.2)(react@16.14.0)
       react: 16.14.0
       react-dom: 17.0.2(react@16.14.0)
       react-sortable-hoc: 2.0.0(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      unstated-next: 1.1.0
       use-json-comparison: 1.0.6(react@16.14.0)
-      use-media-antd-query: 1.1.0(react@16.14.0)
     transitivePeerDependencies:
       - '@types/lodash.merge'
       - prop-types
     dev: false
 
-  /@ant-design/pro-table@3.0.0-experimental.16(@types/lodash.merge@4.6.7)(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-XVKzjLfLAodt603s+BcDp5biVG/hmBzTCdQ+CEQstIOV1iBjlo8uUkExiOXj00x/qo6wsl4nmh/SQppvrwohaQ==}
+  /@ant-design/pro-table@3.6.1(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-t6B2al8HoX8WDVaPqmbtjYIRV1LG8Eo/WaWvFUlhWUaQ9h2rh+GxtFRe2pA3XBVB5TEYiBEu0fqPvjglNEox6g==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       rc-field-form: ^1.22.0
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
     dependencies:
-      '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-card': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-field': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-form': 2.0.0-experimental.15(@types/lodash.merge@4.6.7)(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-provider': 2.0.0-experimental.10(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-utils': 2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/icons': 5.0.1(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-card': 2.3.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-field': 2.5.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-form': 2.10.1(antd@5.0.0)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-provider': 2.7.0(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-utils': 2.7.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
       antd: 5.0.0(react-dom@17.0.2)(react@16.14.0)
       classnames: 2.3.2
       dayjs: 1.11.7
       omit.js: 2.0.2
       rc-field-form: 1.29.1(react-dom@17.0.2)(react@16.14.0)
+      rc-resize-observer: 1.3.1(react-dom@17.0.2)(react@16.14.0)
       rc-util: 5.29.3(react-dom@17.0.2)(react@16.14.0)
       react: 16.14.0
       react-dom: 17.0.2(react@16.14.0)
       react-sortable-hoc: 2.0.0(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      unstated-next: 1.1.0
       use-json-comparison: 1.0.6(react@16.14.0)
-      use-media-antd-query: 1.1.0(react@16.14.0)
     transitivePeerDependencies:
       - '@types/lodash.merge'
       - prop-types
     dev: false
 
-  /@ant-design/pro-utils@2.0.0-experimental.15(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-5WF+BJKUdSptlPLb+cQjo0g8gI/VtUgH8JXZkVoX4YoyWQaXlYKyPz3J4bleIOSFg4auPZ+KA4001YysVkIHkw==}
+  /@ant-design/pro-utils@2.7.2(antd@4.24.8)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-1nzw9x4Hy/LXPUGWvCaFQd1g5SkX86yDp9KFZ3m4gvVREo4/7QTp0iyZasEWweaND3JNLcaXXU8sLfMiMgHIiw==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
     dependencies:
-      '@ant-design/cssinjs': 0.0.0-alpha.60(react-dom@17.0.2)(react@16.14.0)
       '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-provider': 2.0.0-experimental.10(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-provider': 2.7.0(antd@4.24.8)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
-      '@ctrl/tinycolor': 3.6.0
       antd: 4.24.8(react-dom@17.0.2)(react@16.14.0)
       classnames: 2.3.2
       dayjs: 1.11.7
@@ -608,23 +655,21 @@ packages:
       react: 16.14.0
       react-dom: 17.0.2(react@16.14.0)
       react-sortable-hoc: 2.0.0(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      swr: 1.3.0(react@16.14.0)
+      swr: 2.1.2(react@16.14.0)
     transitivePeerDependencies:
       - prop-types
     dev: false
 
-  /@ant-design/pro-utils@2.0.0-experimental.15(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
-    resolution: {integrity: sha512-5WF+BJKUdSptlPLb+cQjo0g8gI/VtUgH8JXZkVoX4YoyWQaXlYKyPz3J4bleIOSFg4auPZ+KA4001YysVkIHkw==}
+  /@ant-design/pro-utils@2.7.2(antd@5.0.0)(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0):
+    resolution: {integrity: sha512-1nzw9x4Hy/LXPUGWvCaFQd1g5SkX86yDp9KFZ3m4gvVREo4/7QTp0iyZasEWweaND3JNLcaXXU8sLfMiMgHIiw==}
     peerDependencies:
-      antd: '>=4.20.0'
+      antd: '>=4.23.0'
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
     dependencies:
-      '@ant-design/cssinjs': 0.0.0-alpha.60(react-dom@17.0.2)(react@16.14.0)
       '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-provider': 2.0.0-experimental.10(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-provider': 2.7.0(antd@5.0.0)(react-dom@17.0.2)(react@16.14.0)
       '@babel/runtime': 7.21.0
-      '@ctrl/tinycolor': 3.6.0
       antd: 5.0.0(react-dom@17.0.2)(react@16.14.0)
       classnames: 2.3.2
       dayjs: 1.11.7
@@ -632,7 +677,7 @@ packages:
       react: 16.14.0
       react-dom: 17.0.2(react@16.14.0)
       react-sortable-hoc: 2.0.0(prop-types@15.8.1)(react-dom@17.0.2)(react@16.14.0)
-      swr: 1.3.0(react@16.14.0)
+      swr: 2.1.2(react@16.14.0)
     transitivePeerDependencies:
       - prop-types
     dev: false
@@ -2970,10 +3015,6 @@ packages:
       webpack: 5.78.0
     dev: false
 
-  /@qixian.cs/path-to-regexp@6.1.0:
-    resolution: {integrity: sha512-2jIiLiVZB1jnY7IIRQKtoV8Gnr7XIhk4mC88ONGunZE3hYt5IHUG4BE/6+JiTBjjEWQLBeWnZB8hGpppkufiVw==}
-    dev: false
-
   /@rc-component/portal@1.1.1(react-dom@17.0.2)(react@16.14.0):
     resolution: {integrity: sha512-m8w3dFXX0H6UkJ4wtfrSwhe2/6M08uz24HHrF8pWfAXPwA9hwCuTE5per/C86KwNLouRpwFGcr7LfpHaa1F38g==}
     engines: {node: '>=8.x'}
@@ -3273,7 +3314,7 @@ packages:
     resolution: {integrity: sha512-hy8b7Y1J8OGe6LbAjj3xniQrj3v6lsivCcrmf4TzSgPzLkhIeKgc5IZnT7ReIqmEuodjfO8EYAuoFvIrHi/+jQ==}
     deprecated: This is a stub types definition. history provides its own type definitions, so you do not need this installed.
     dependencies:
-      history: 4.10.1
+      history: 5.3.0
     dev: false
 
   /@types/hoist-non-react-statics@3.3.1:
@@ -3315,16 +3356,6 @@ packages:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: false
 
-  /@types/lodash.merge@4.6.7:
-    resolution: {integrity: sha512-OwxUJ9E50gw3LnAefSHJPHaBLGEKmQBQ7CZe/xflHkyy/wH2zVyEIAKReHvVrrn7zKdF58p16We9kMfh7v0RRQ==}
-    dependencies:
-      '@types/lodash': 4.14.192
-    dev: false
-
-  /@types/lodash@4.14.192:
-    resolution: {integrity: sha512-km+Vyn3BYm5ytMO13k9KTp27O75rbQ0NFw+U//g+PX7VZyjCioXaRFisqSIJRECljcTv73G3i6BpglNGHgUQ5A==}
-    dev: false
-
   /@types/minimist@1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: false
@@ -3363,7 +3394,7 @@ packages:
       '@types/history': 4.7.11
       '@types/react': 18.0.0
       '@types/react-router': 5.1.20
-      redux: 3.7.2
+      redux: 4.2.1
     dev: false
 
   /@types/react-router@5.1.20:
@@ -3861,12 +3892,12 @@ packages:
       - typescript
     dev: false
 
-  /@umijs/max@4.0.64(@babel/core@7.21.4)(@types/lodash.merge@4.6.7)(@types/react-dom@18.0.0)(@types/react@18.0.0)(dva@2.5.0-beta.2)(postcss@8.4.21)(prettier@2.7.1)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)(styled-components@5.3.9)(typescript@5.0.2)(webpack@5.78.0):
+  /@umijs/max@4.0.64(@babel/core@7.21.4)(@types/react-dom@18.0.0)(@types/react@18.0.0)(dva@2.5.0-beta.2)(postcss@8.4.21)(prettier@2.7.1)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)(styled-components@5.3.9)(typescript@5.0.2)(webpack@5.78.0):
     resolution: {integrity: sha512-C1zlntaehtnO3BuYK4357znpiAuIDpu1ogJt1i3ehKdQ1PjUqzLGFPw8LWedoU6GzVVbGGBOLsWKbWCCzbV6Ng==}
     hasBin: true
     dependencies:
       '@umijs/lint': 4.0.64(eslint@8.35.0)(styled-components@5.3.9)(stylelint@14.8.2)(typescript@5.0.2)
-      '@umijs/plugins': 4.0.64(@types/lodash.merge@4.6.7)(@types/react-dom@18.0.0)(@types/react@18.0.0)(antd@4.24.8)(dva@2.5.0-beta.2)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@umijs/plugins': 4.0.64(@types/react-dom@18.0.0)(@types/react@18.0.0)(antd@4.24.8)(dva@2.5.0-beta.2)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
       antd: 4.24.8(react-dom@17.0.2)(react@16.14.0)
       eslint: 8.35.0
       stylelint: 14.8.2
@@ -3933,13 +3964,13 @@ packages:
       tsx: 3.12.6
     dev: false
 
-  /@umijs/plugins@4.0.64(@types/lodash.merge@4.6.7)(@types/react-dom@18.0.0)(@types/react@18.0.0)(antd@4.24.8)(dva@2.5.0-beta.2)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
+  /@umijs/plugins@4.0.64(@types/react-dom@18.0.0)(@types/react@18.0.0)(antd@4.24.8)(dva@2.5.0-beta.2)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0):
     resolution: {integrity: sha512-VPyRVGfMQTLJcZ9V6nvrufjRmj09CYFZ7M2F+iE9CB4rx54I6Ov3PuoAyAiBYmCLQSUgRlZ4Ca5VlpBudUhCcw==}
     dependencies:
       '@ahooksjs/use-request': 2.8.15(react@16.14.0)
       '@ant-design/antd-theme-variable': 1.0.0
       '@ant-design/icons': 4.7.0(react-dom@17.0.2)(react@16.14.0)
-      '@ant-design/pro-components': 2.0.1(@types/lodash.merge@4.6.7)(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
+      '@ant-design/pro-components': 2.4.4(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.29.1)(react-dom@17.0.2)(react@16.14.0)
       '@tanstack/react-query': 4.28.0(react-dom@17.0.2)(react@16.14.0)
       '@tanstack/react-query-devtools': 4.29.0(@tanstack/react-query@4.28.0)(react-dom@17.0.2)(react@16.14.0)
       '@umijs/bundler-utils': 4.0.64
@@ -4068,13 +4099,8 @@ packages:
       react-router-dom: 6.3.0(react-dom@18.1.0)(react@18.1.0)
     dev: false
 
-  /@umijs/route-utils@2.2.2:
-    resolution: {integrity: sha512-cMk6qizy0pfpiwpVCvNQB0BKBUJEH33pDv5q5k2tSleSDw2abkJkTu2Kd5hKzoESLuFK43oGeOfcplZqm2bRxw==}
-    dependencies:
-      '@qixian.cs/path-to-regexp': 6.1.0
-      fast-deep-equal: 3.1.3
-      lodash.isequal: 4.5.0
-      memoize-one: 5.2.1
+  /@umijs/route-utils@4.0.1:
+    resolution: {integrity: sha512-+1ixf1BTOLuH+ORb4x8vYMPeIt38n9q0fJDwhv9nSxrV46mxbLF0nmELIo9CKQB2gHfuC4+hww6xejJ6VYnBHQ==}
     dev: false
 
   /@umijs/server@4.0.64:
@@ -4087,10 +4113,6 @@ packages:
       react-router-dom: 6.3.0(react-dom@18.1.0)(react@18.1.0)
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /@umijs/ssr-darkreader@4.9.45:
-    resolution: {integrity: sha512-XlcwzSYQ/SRZpHdwIyMDS4FOGX5kP4U/2g2mykyn/iPQTK4xTiQAyBu6UnnDnn7d5P8s7Atzh1C7H0ETNOypJg==}
     dev: false
 
   /@umijs/test@4.0.64(@babel/core@7.21.4):
@@ -7624,10 +7646,6 @@ packages:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
     dev: false
 
-  /lodash.isequal@4.5.0:
-    resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
-    dev: false
-
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: false
@@ -7736,10 +7754,6 @@ packages:
     engines: {node: '>= 4.0.0'}
     dependencies:
       fs-monkey: 1.0.3
-    dev: false
-
-  /memoize-one@5.2.1:
-    resolution: {integrity: sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==}
     dev: false
 
   /meow@9.0.0:
@@ -10846,12 +10860,13 @@ packages:
       stable: 0.1.8
     dev: false
 
-  /swr@1.3.0(react@16.14.0):
-    resolution: {integrity: sha512-dkghQrOl2ORX9HYrMDtPa7LTVHJjCTeZoB1dqTbnnEDlSvN8JEKpYIYurDfvbQFUUS8Cg8PceFVZNkW0KNNYPw==}
+  /swr@2.1.2(react@16.14.0):
+    resolution: {integrity: sha512-ocfaD2rnYZKqTDplCEX2bH5Z1++n2JSej9oYi7hVfXXWYm+0RP+H6fVrogWB0mtMclv1guk9kEnAzNLygOy9Hw==}
     peerDependencies:
       react: ^16.11.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 16.14.0
+      use-sync-external-store: 1.2.0(react@16.14.0)
     dev: false
 
   /symbol-observable@1.2.0:
@@ -11172,10 +11187,6 @@ packages:
   /universalify@2.0.0:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
-    dev: false
-
-  /unstated-next@1.1.0:
-    resolution: {integrity: sha512-AAn47ZncPvgBGOvMcn8tSRxsrqwf2VdAPxLASTuLJvZt4rhKfDvUkmYZLGfclImSfTVMv7tF4ynaVxin0JjDCA==}
     dev: false
 
   /update-browserslist-db@1.0.10(browserslist@4.21.5):
