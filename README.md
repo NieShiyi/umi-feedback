@@ -7,8 +7,15 @@
 3. pnpm start启动项目
 
 ## 问题
-界面显示异常，antd-design-pro样式异常
+1.界面显示异常，antd-design-pro样式异常
 ![image](https://user-images.githubusercontent.com/35129125/230373364-b537a845-f1f0-4dab-b5e0-a68f22a27670.png)
+2.umi的配置文件.umirc.ts中 theme设置了主题色失效，antd的主题颜色还是默认的蓝色。
+```
+ theme: {
+    "@primary-color": "#1494D3", //更改主题色
+  }
+```
+3.可能存在其他的问题
 
 ## 分析和修改问题
 1.安装项目的package.json如下所示
@@ -50,6 +57,9 @@
 
 3.升级@ant-design/pro-components为2.4.4后；页面布局和样式就显示正常了
 ![image](https://user-images.githubusercontent.com/35129125/230373985-3bcc308c-fc80-4921-8828-4b0bde4afe94.png)
+
+4. 核心还是pnpm v8安装依赖导致的问题，我现在使用的pnpm安装依赖会生成pnpm-lock.yaml文件，对应的lockfileVersion: '6.0'。我之前是使用的pnpm <v8版本，lockfileVersion: '5.4'，无论是antd-dsign-pro，还是antd的样式都是正常的，也可以成功设置theme
+
 
 ## 环境信息
 node：v16.17.0  
