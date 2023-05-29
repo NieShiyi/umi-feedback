@@ -31,5 +31,9 @@ export default defineConfig({
     },
   ],
   npmClient: 'pnpm',
+  locale: {
+    default: 'zh-CN',
+    baseNavigator: false,
+  },
 });
 
