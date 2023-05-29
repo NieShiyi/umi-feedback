@@ -68,3 +68,9 @@ platform： windows10
 umi（全局安装）： v4.0.64  
 
 ### 注意：根据umi4安装的版本在main分支上
+
+## 其他关联
+### issue关联：https://github.com/NieShiyi/umi-feedback/issues/1
+### 已修改分支：https://github.com/NieShiyi/umi-feedback/tree/umi4-antdpro-style-pnpm-resolved
+
+
